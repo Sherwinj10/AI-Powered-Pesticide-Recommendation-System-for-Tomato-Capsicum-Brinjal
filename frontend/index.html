@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Pesticide Recommendation Webpage</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+  <body>
+    <!-- Loading Screen (Initially hidden, shown during processing) -->
+    <div id="loading-screen" class="loading-screen hidden">
+      <div class="loader">
+        <div class="leaf-spinner"></div>
+        <p class="loading-text">Analyzing plant health and calculating pesticide dosage...</p>
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="app" class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="title">AI-Powered Smart Pesticide Recommendation System for Tomato, Capsicum, and Brinjal</h1>
+        <p class="subtitle">Detect plant diseases and get optimized pesticide recommendations</p>
+      </header>
+
+      <!-- Input Form Section -->
+      <section id="input-section" class="section">
+        <div class="card form-card">
+          <h2 class="card-title">Plant Analysis Form</h2>
+          <form id="analysis-form" class="form">
+            <div class="form-group">
+              <label for="plant-type" class="form-label">Plant Type</label>
+              <select id="plant-type" name="plant_type" class="form-select" required>
+                <option value="">Select a plant</option>
+                <option value="tomato">Tomato</option>
+                <option value="capsicum">Capsicum (Bell Pepper)</option>
+                <option value="eggplant">Brinjal (Eggplant)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="land-size" class="form-label">Land Size</label>
+              <div class="input-with-unit">
+                <input type="number" id="land-size" name="land_size" class="form-input" placeholder="Enter size" min="0.1" step="0.1" required>
+                <select id="land-unit" name="land_unit" class="form-select unit-select">
+                  <option value="acres">Acres</option>
+                  <option value="sqm">Sq. Meters</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="leaf-image" class="form-label">Upload Leaf Image</label>
+              <div class="file-upload-wrapper">
+                <input type="file" id="leaf-image" name="file" class="file-input" accept="image/*" required>
+                <label for="leaf-image" class="file-label">
+                  <span class="file-icon">📷</span>
+                  <span class="file-text">Choose Image</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Analyze Plant Health</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Result Section (Initially hidden) -->
+      <!-- BACKEND INTEGRATION POINT: Replace hardcoded values with API response data -->
+      <section id="result-section" class="section hidden">
+        <div class="card result-card">
+          <div class="result-header">
+            <span class="result-icon">✅</span>
+            <h2 class="card-title">Analysis Complete</h2>
+          </div>
+
+          <div class="result-content">
+            <!-- BACKEND: Update disease name from API response -->
+            <div class="result-item">
+              <span class="result-label">Detected Disease:</span>
+              <span class="result-value" id="disease-name">Bell Pepper – Bacterial Leaf Spot</span>
+            </div>
+
+            <!-- BACKEND: Update severity level from API response -->
+            <div class="result-item">
+              <span class="result-label">Severity Level:</span>
+              <span class="result-value severity-moderate" id="severity-level">Moderate</span>
+            </div>
+
+            <!-- BACKEND: Update pesticide recommendation from API response -->
+            <div class="result-item">
+              <span class="result-label">Recommended Pesticide:</span>
+              <span class="result-value" id="pesticide-recommendation">Copper Oxychloride (0.3%)</span>
+            </div>
+
+            <!-- BACKEND: Update application timing from API response -->
+            <div class="result-item">
+              <span class="result-label">Best Time to Apply:</span>
+              <span class="result-value" id="application-time">Loading...</span>
+            </div>
+
+            <div class="result-item">
+              <span class="result-label">Weather Conditions:</span>
+              <span class="result-value" id="weather-details">Loading...</span>
+            </div>
+
+            <div class="result-item highlight">
+              <span class="result-label">Recommended Dosage:</span>
+              <span class="result-value" id="dosage-amount">Loading...</span>
+            </div>
+          <button type="button" class="btn btn-secondary" onclick="location.reload()">Analyze Another Plant</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
