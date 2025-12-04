@@ -31,7 +31,7 @@ except Exception as e:
     print(f"FATAL ERROR: Could not load recommendation_db.json: {e}")
     RECOMMENDATION_DB = {} # Start with an empty DB if load fails
 # --- 3. API Key and Helper Functions (No Change) ---
-OPENWEATHER_API_KEY = "347e7f996d0bf8ce6b23a60d5d6a076b"
+OPENWEATHER_API_KEY = "put_your_api_key"
 
 def fetch_weather_data(lat, lon, api_key):
     """
