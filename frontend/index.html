@@ -21,7 +21,7 @@
     <div id="app" class="container">
       <!-- Header -->
       <header class="header">
-        <h1 class="title">AI-Powered Smart Pesticide Recommendation System for Tomato, Capsicum, and Brinjal</h1>
+        <h1 class="title">AI-Powered Smart Pesticide Recommendation System for Tomato, Capsicum and Brinjal</h1>
         <p class="subtitle">Detect plant diseases and get optimized pesticide recommendations</p>
       </header>
 
@@ -52,13 +52,37 @@
             </div>
 
             <div class="form-group">
-              <label for="leaf-image" class="form-label">Upload Leaf Image</label>
-              <div class="file-upload-wrapper">
-                <input type="file" id="leaf-image" name="file" class="file-input" accept="image/*" required>
-                <label for="leaf-image" class="file-label">
-                  <span class="file-icon">📷</span>
-                  <span class="file-text">Choose Image</span>
-                </label>
+              <label class="form-label">Leaf Image Input</label>
+
+              <div class="input-mode-toggle" role="group" aria-label="Select image input mode">
+                <button type="button" class="btn btn-toggle active" id="upload-mode-btn">Upload</button>
+                <button type="button" class="btn btn-toggle" id="camera-mode-btn">Camera</button>
+              </div>
+
+              <div id="upload-input" class="input-mode">
+                <div class="file-upload-wrapper">
+                  <input type="file" id="leaf-image" name="file" class="file-input" accept="image/*" required>
+                  <label for="leaf-image" class="file-label">
+                    <span class="file-icon">📷</span>
+                    <span class="file-text">Choose Image</span>
+                  </label>
+                </div>
+              </div>
+
+              <div id="camera-input" class="input-mode hidden">
+                <div class="camera-wrapper">
+                  <video id="camera-stream" class="camera-stream" autoplay playsinline muted></video>
+                  <canvas id="capture-canvas" class="hidden"></canvas>
+                  <div class="camera-controls">
+                    <button type="button" class="btn btn-secondary" id="start-camera">Start Camera</button>
+                    <button type="button" class="btn btn-primary" id="capture-photo" disabled>Capture Photo</button>
+                  </div>
+                  <div id="camera-preview" class="camera-preview hidden">
+                    <img id="captured-image" alt="Captured leaf preview">
+                    <button type="button" class="btn btn-secondary" id="retake-photo">Retake</button>
+                  </div>
+                </div>
+                <p class="camera-hint">Grant camera permission, position the leaf in good light, then capture.</p>
               </div>
             </div>
 
@@ -104,6 +128,21 @@
             <div class="result-item">
               <span class="result-label">Weather Conditions:</span>
               <span class="result-value" id="weather-details">Loading...</span>
+            </div>
+
+            <div class="result-item">
+              <span class="result-label">Re-entry Interval (REI):</span>
+              <span class="result-value" id="rei-hours">Loading...</span>
+            </div>
+
+            <div class="result-item">
+              <span class="result-label">Maximum Sprays:</span>
+              <span class="result-value" id="max-sprays">Loading...</span>
+            </div>
+
+            <div class="result-item">
+              <span class="result-label">Pre-Harvest Interval (PHI):</span>
+              <span class="result-value" id="phi-days">Loading...</span>
             </div>
 
             <div class="result-item highlight">

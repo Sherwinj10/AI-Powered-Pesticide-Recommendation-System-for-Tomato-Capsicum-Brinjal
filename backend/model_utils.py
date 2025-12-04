@@ -10,6 +10,8 @@ import numpy as np
 import io
 import os
 import json
+import cv2
+import numpy as np
 from transformers import AutoImageProcessor, MobileViTForImageClassification
 
 # --- 1. DEFINE PATHS AND IMAGE SIZES ---
@@ -153,3 +155,60 @@ def predict_disease(model, image_bytes, model_type, class_map, img_size):
     )
     
     return predicted_class_name
+
+def calculate_severity_cv(image_bytes):
+    """
+    Uses OpenCV to calculate disease severity as a percentage.
+    This is a "hack" and is less accurate than a trained AI model.
+    It works by counting "diseased" (brown/yellow) pixels vs. "healthy" (green) pixels.
+    """
+    try:
+        # --- 1. Load Image ---
+        # Convert image bytes to a numpy array
+        nparr = np.frombuffer(image_bytes, np.uint8)
+        # Decode the image into OpenCV format
+        img_cv = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        
+        # --- 2. Convert to HSV Color Space ---
+        # HSV (Hue, Saturation, Value) is much better for color segmentation
+        hsv = cv2.cvtColor(img_cv, cv2.COLOR_BGR2HSV)
+
+        # --- 3. Define Color Ranges ---
+        # Green range (healthy leaf tissue)
+        # These values are a good starting point but may need tuning.
+        green_lower = np.array([25, 50, 20])
+        green_upper = np.array([85, 255, 255])
+
+        # Diseased range (brown/yellow spots)
+        disease_lower = np.array([10, 50, 50])
+        disease_upper = np.array([25, 255, 255])
+
+        # --- 4. Create Masks ---
+        green_mask = cv2.inRange(hsv, green_lower, green_upper)
+        disease_mask = cv2.inRange(hsv, disease_lower, disease_upper)
+
+        # --- 5. Calculate Pixel Counts ---
+        green_pixels = cv2.countNonZero(green_mask)
+        diseased_pixels = cv2.countNonZero(disease_mask)
+        
+        # Total "leaf" area is the sum of healthy and diseased pixels
+        total_leaf_pixels = green_pixels + diseased_pixels
+        
+        if total_leaf_pixels == 0:
+            # Avoid division by zero if no leaf is detected
+            return "Not Available"
+
+        # --- 6. Calculate Severity Percentage ---
+        severity_perc = (diseased_pixels / total_leaf_pixels) * 100
+
+        # --- 7. Return Severity String ---
+        if severity_perc < 10:
+            return "Low"
+        elif severity_perc < 35:
+            return "Medium"
+        else:
+            return "High"
+
+    except Exception as e:
+        print(f"Error in CV severity calculation: {e}")
+        return "Not Available" # Fallback

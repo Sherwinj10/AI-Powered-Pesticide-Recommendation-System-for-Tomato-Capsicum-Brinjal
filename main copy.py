@@ -22,7 +22,7 @@ if not MODELS or not CLASS_MAPPINGS:
     print("FATAL ERROR: Models or class mappings could not be loaded. Shutting down.")
     # In a real app, you might want to exit
     # exit()
-DB_PATH = os.path.join("backend", "recommendation_db_pkb.json")
+DB_PATH = os.path.join("backend", "recommendation_db_ws.json")
 try:
     with open(DB_PATH, 'r') as f:
         RECOMMENDATION_DB = json.load(f)
@@ -62,7 +62,7 @@ def fetch_weather_data(lat, lon, api_key):
         return {
             "temp": None, "humidity": None, "wind_speed": None, "description": "Weather data unavailable"
         }
-def get_recommendation_logic(plant_type, disease_name, severity, weather_data, land_size, land_unit):
+def get_recommendation_logic(disease_name, severity, weather_data, land_size, land_unit):
     """
     Look up pesticide recommendation from recommendation_db_pkb.json.
 
@@ -95,43 +95,31 @@ def get_recommendation_logic(plant_type, disease_name, severity, weather_data, l
     base_dosage_per_acre = 100
     unit = "ml"
     notes = f"No recommendation found for '{disease_name}'. Please consult a local agricultural expert."
-    rei_hours = None
-    spray_interval_days = None
-    max_sprays = None
-    phi_days = None
-    toxicity = None
 
-    # --- 1. Find matching disease entry in DB for this plant type ---
-    plant_entry = RECOMMENDATION_DB.get(plant_type.lower())
-    if isinstance(plant_entry, dict):
-        disease_entry = None
-        for db_key, value in plant_entry.items():
-            # Keys can be things like "Wilt Disease", "Late Blight", etc.
-            if db_key.lower() == disease_name.lower() or db_key.lower() in disease_name.lower():
-                disease_entry = value
-                break
+    # --- 1. Find matching disease entry in DB ---
+    disease_entry = None
+    for db_key, value in RECOMMENDATION_DB.items():
+        # Keys can be things like "Wilt Disease", "Late Blight", etc.
+        if db_key.lower() == disease_name.lower() or db_key.lower() in disease_name.lower():
+            disease_entry = value
+            break
 
-        if disease_entry:
-            treatment = disease_entry.get("treatment", {})
-            chemical = treatment.get("chemical", {})
+    if disease_entry:
+        treatment = disease_entry.get("treatment", {})
+        chemical = treatment.get("chemical", {})
 
-            # --- 2. Choose severity bucket (chemical[severity][0]) ---
-            # Prefer exact severity; fall back to medium, then low, then high.
-            rec_list = chemical.get(severity_key)
-            if not rec_list:
-                rec_list = chemical.get("medium") or chemical.get("low") or chemical.get("high")
+        # --- 2. Choose severity bucket (chemical[severity][0]) ---
+        # Prefer exact severity; fall back to medium then low.
+        rec_list = chemical.get(severity_key)
+        if not rec_list:
+            rec_list = chemical.get("medium") or chemical.get("low") or chemical.get("high")
 
-            if rec_list:
-                rec = rec_list[0]  # Take the first recommendation in the list
-                pesticide = rec.get("name", pesticide)
-                base_dosage_per_acre = rec.get("dose_per_acre", base_dosage_per_acre)
-                unit = rec.get("unit", unit)
-                notes = rec.get("notes", notes)
-                rei_hours = rec.get("rei_hours")
-                spray_interval_days = rec.get("spray_interval_days")
-                max_sprays = rec.get("max_sprays")
-                phi_days = rec.get("phi_days")
-                toxicity = rec.get("toxicity")
+        if rec_list:
+            rec = rec_list[0]  # Take the first recommendation in the list
+            pesticide = rec.get("name", pesticide)
+            base_dosage_per_acre = rec.get("dose_per_acre", base_dosage_per_acre)
+            unit = rec.get("unit", unit)
+            notes = rec.get("notes", notes)
 
     # --- 3. Calculate Dosage ---
     if land_unit == "sqm":
@@ -164,12 +152,7 @@ def get_recommendation_logic(plant_type, disease_name, severity, weather_data, l
     return {
         "pesticide_name": pesticide,
         "application_advice": app_advice,
-        "dosage_text": dosage_text,
-        "rei_hours": rei_hours,
-        "spray_interval_days": spray_interval_days,
-        "max_sprays": max_sprays,
-        "phi_days": phi_days,
-        "toxicity": toxicity,
+        "dosage_text": dosage_text
     }
 
 
@@ -308,7 +291,6 @@ async def predict_recommendation(
         
         # --- PASS THE NEW SEVERITY ---
         recommendation_dict = get_recommendation_logic(
-            form_plant_type,
             disease_name, 
             severity_level, # <-- Pass the CV severity ("Low", "Medium", "High")
             response_weather,
@@ -325,12 +307,7 @@ async def predict_recommendation(
         "pesticide_recommendation": recommendation_dict["pesticide_name"],
         "application_time": recommendation_dict["application_advice"],
         "dosage_amount": recommendation_dict["dosage_text"],
-        "weather_info": response_weather,
-        "rei_hours": recommendation_dict.get("rei_hours"),
-        "spray_interval_days": recommendation_dict.get("spray_interval_days"),
-        "max_sprays": recommendation_dict.get("max_sprays"),
-        "phi_days": recommendation_dict.get("phi_days"),
-        "toxicity": recommendation_dict.get("toxicity"),
+        "weather_info": response_weather
     }
 
 # --- 7. Serve Your HTML/CSS/JS (MUST COME LAST) ---

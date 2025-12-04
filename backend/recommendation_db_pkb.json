@@ -1,0 +1,1531 @@
+{
+  "tomato": {
+  "Early Blight": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Trichoderma viride",
+        "dose_per_acre": 1000,
+        "unit": "g",
+        "toxicity": "low",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 3,
+        "weather": {
+          "max_temp": 34,
+          "min_temp": 12,
+          "avoid_rain": true,
+          "avoid_high_humidity": false
+        },
+        "notes": "Apply early to suppress fungal growth naturally."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Mancozeb 75% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Use at first symptoms. Works best with strong coverage."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Metalaxyl + Mancozeb",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 33,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Curative + protective effect. Suitable for progressing infections."
+        }
+      ],
+      "high": [
+        {
+          "name": "Cymoxanil + Mancozeb",
+          "dose_per_acre": 600,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 10,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Strong combination—use only for severe outbreaks."
+        }
+      ]
+    }
+  }
+},
+"Late Blight": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Copper Hydroxide (Organic Approved)",
+        "dose_per_acre": 400,
+        "unit": "g",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 1,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "max_temp": 28,
+          "min_temp": 10,
+          "avoid_rain": true,
+          "avoid_high_humidity": false
+        },
+        "notes": "Use in early infection. Works best in dry periods."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Mancozeb 75% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Apply preventively when cool, moist weather is expected."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Metalaxyl + Mancozeb (Ridomil)",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Use when disease has just started spreading."
+        }
+      ],
+      "high": [
+        {
+          "name": "Famoxadone + Cymoxanil (Equation Pro)",
+          "dose_per_acre": 600,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 10,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 28,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Strong systemic + contact activity for severe outbreaks only."
+        }
+      ]
+    }
+  }
+},
+"Bacterial Spot": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32,
+          "min_temp": 12
+        },
+        "notes": "Use at early stages. Helps suppress bacterial spread and insect vectors."
+      },
+      {
+        "name": "Bacillus subtilis (Bio-fungicide)",
+        "dose_per_acre": 400,
+        "unit": "g",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 30
+        },
+        "notes": "Biological control that inhibits Xanthomonas bacterial growth."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Copper Oxychloride 50% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Protectant fungicide/bactericide. Apply at first signs of water-soaked spots."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Streptocycline (Streptomycin Sulphate)",
+          "dose_per_acre": 100,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 30
+          },
+          "notes": "Use with caution. Strong bactericide, only when infection is spreading."
+        }
+      ],
+      "high": [
+        {
+          "name": "Copper Hydroxide 77% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Effective in severe outbreaks. Combine with sanitation practices."
+        }
+      ]
+    }
+  }
+},
+"Leaf Mold": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Potassium Bicarbonate (Organic Fungicide)",
+        "dose_per_acre": 500,
+        "unit": "g",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 1,
+        "spray_interval_days": 7,
+        "max_sprays": 3,
+        "weather": {
+          "max_temp": 35,
+          "min_temp": 12,
+          "avoid_rain": true,
+          "avoid_high_humidity": false
+        },
+        "notes": "Very effective in early stages; reduces leaf humidity."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Chlorothalonil 75% WP (Kavach)",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 5,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Use when leaf mold symptoms just begin to appear."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Carbendazim 50% WP (Bavistin)",
+          "dose_per_acre": 120,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 5,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Systemic; very effective for moderate infection."
+        }
+      ],
+      "high": [
+        {
+          "name": "Difenoconazole 25% EC (Score / Topas)",
+          "dose_per_acre": 120,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Strong systemic fungicide; alternate to avoid resistance."
+        }
+      ]
+    }
+  }
+},
+"Septoria Leaf Spot": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 3,
+        "weather": {
+          "max_temp": 34,
+          "min_temp": 12,
+          "avoid_rain": true,
+          "avoid_high_humidity": false
+        },
+        "notes": "Apply on underside of leaves. Works best in early stage."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Mancozeb 75% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Standard protective fungicide. Remove infected lower leaves."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Chlorothalonil 75% WP",
+          "dose_per_acre": 200,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 5,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Provides protective coverage. Tank-mix with systemics if needed."
+        }
+      ],
+      "high": [
+        {
+          "name": "Azoxystrobin 23% SC (Amistar)",
+          "dose_per_acre": 150,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Strong systemic fungicide for severe cases."
+        }
+      ]
+    }
+  }
+},
+"Spider Mites": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 5,
+        "max_sprays": 3,
+        "weather": {
+          "max_temp": 32,
+          "min_temp": 12,
+          "avoid_rain": true,
+          "avoid_high_humidity": false
+        },
+        "notes": "Excellent early control. Spray on underside of leaves where mites hide."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Neem Oil (10000 ppm)",
+          "dose_per_acre": 300,
+          "unit": "ml",
+          "toxicity": "low",
+          "rei_hours": 4,
+          "phi_days": 0,
+          "spray_interval_days": 5,
+          "max_sprays": 3,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": false
+          },
+          "notes": "Organic-first approach for mild infestations."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Abamectin 1.9% EC (Vertimec)",
+          "dose_per_acre": 150,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Very effective against mites. Avoid spraying during high heat."
+        }
+      ],
+      "high": [
+        {
+          "name": "Spiromesifen 22.9% SC (Oberon)",
+          "dose_per_acre": 150,
+          "unit": "ml",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Strong miticide. Apply with thorough coverage."
+        }
+      ]
+    }
+  }
+},
+"Target Spot": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Copper Oxychloride 50% WP (Organic Compatible Dose)",
+        "dose_per_acre": 300,
+        "unit": "g",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "max_temp": 32,
+          "min_temp": 12,
+          "avoid_rain": true,
+          "avoid_high_humidity": true
+        },
+        "notes": "Early-stage suppression. Works best before lesions expand."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Chlorothalonil 75% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 12,
+          "phi_days": 5,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 12,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Effective protectant. Apply when symptoms first appear."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Azoxystrobin 23% SC (Amistar)",
+          "dose_per_acre": 150,
+          "unit": "ml",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "max_temp": 32,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Systemic fungicide, excellent for spreading infections."
+        }
+      ],
+      "high": [
+        {
+          "name": "Tebuconazole 25.9% EC",
+          "dose_per_acre": 120,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 28,
+            "min_temp": 10,
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "For severe outbreaks. Combine cultural control (remove infected leaves)."
+        }
+      ]
+    }
+  }
+},
+"Tomato Yellow Leaf Curl Virus": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 5,
+        "max_sprays": 3,
+        "weather": {
+          "max_temp": 32,
+          "min_temp": 12,
+          "avoid_rain": true,
+          "avoid_high_humidity": false
+        },
+        "notes": "No cure for virus. Neem controls whiteflies that transmit TYLCV."
+      },
+      {
+        "name": "Yellow Sticky Traps",
+        "dose_per_acre": 20,
+        "unit": "traps",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Most effective non-chemical method for whitefly suppression."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Imidacloprid 17.8% SL (Confidor)",
+          "dose_per_acre": 100,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 12,
+            "avoid_rain": true
+          },
+          "notes": "Use only when whitefly count is high. Does NOT cure virus."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Thiamethoxam 25% WG (Actara)",
+          "dose_per_acre": 80,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 5,
+          "spray_interval_days": 12,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 10,
+            "avoid_rain": true
+          },
+          "notes": "Controls whiteflies. Remove infected plants to stop spread."
+        }
+      ],
+      "high": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 120,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 28,
+            "min_temp": 10,
+            "avoid_rain": true
+          },
+          "notes": "Use only for severe whitefly pressure. Still no cure for TYLCV."
+        }
+      ]
+    }
+  }
+},
+"Tomato Mosaic Virus": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Sanitation & Hygiene",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Remove infected plants immediately. Disinfect tools with 10% bleach. Avoid touching healthy plants after handling infected ones."
+      },
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 5,
+        "max_sprays": 3,
+        "weather": {
+          "max_temp": 32,
+          "min_temp": 12,
+          "avoid_rain": true
+        },
+        "notes": "Reduces aphids and leaf miners—indirect virus suppression."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 100,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 30,
+            "min_temp": 10,
+            "avoid_rain": true
+          },
+          "notes": "Controls aphids (virus carriers). DOES NOT cure the virus."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 100,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 12,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 28,
+            "min_temp": 10,
+            "avoid_rain": true
+          },
+          "notes": "For moderate spread when whitefly/aphid population is high."
+        }
+      ],
+      "high": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 120,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "max_temp": 28,
+            "min_temp": 10,
+            "avoid_rain": true
+          },
+          "notes": "Severe aphid pressure. Again, NO cure for virus."
+        }
+      ]
+    }
+  }
+},
+"Healthy": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Preventive Neem Oil Spray (Optional)",
+        "dose_per_acre": 200,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 10,
+        "max_sprays": 1,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32,
+          "min_temp": 12
+        },
+        "notes": "Optional preventive spray, mostly unnecessary if no pests are present."
+      },
+      {
+        "name": "Field Hygiene & Monitoring",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Maintain clean field, remove weeds, ensure proper spacing and irrigation."
+      }
+    ],
+    "chemical": {
+      "low": [],
+      "medium": [],
+      "high": []
+    }
+  }
+}
+},
+"capsicum": {
+  "Bacterial Spot": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32,
+          "min_temp": 12
+        },
+        "notes": "Use at early stages. Helps suppress bacterial spread and insect vectors."
+      },
+      {
+        "name": "Bacillus subtilis (Bio-fungicide)",
+        "dose_per_acre": 400,
+        "unit": "g",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 30
+        },
+        "notes": "Biological control that inhibits Xanthomonas bacterial growth."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Copper Oxychloride 50% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Protectant fungicide/bactericide. Apply at first signs of water-soaked spots."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Streptocycline (Streptomycin Sulphate)",
+          "dose_per_acre": 100,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 30
+          },
+          "notes": "Use with caution. Strong bactericide, only when infection is spreading."
+        }
+      ],
+      "high": [
+        {
+          "name": "Copper Hydroxide 77% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 7,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Effective in severe outbreaks. Combine with sanitation practices."
+        }
+      ]
+    }
+  }
+},
+"Healthy": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Preventive Neem Oil Spray (Optional)",
+        "dose_per_acre": 200,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 12,
+        "max_sprays": 1,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32
+        },
+        "notes": "Optional preventive treatment. Mostly unnecessary if no symptoms exist."
+      },
+      {
+        "name": "Field Hygiene & Monitoring",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Maintain proper spacing, remove weeds, avoid overhead irrigation."
+      }
+    ],
+    "chemical": {
+      "low": [],
+      "medium": [],
+      "high": []
+    }
+  }
+}
+},
+"eggplant": {
+  "Insect Pest Disease": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Neem Oil (300 ppm or 10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 5,
+        "max_sprays": 3,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32,
+          "min_temp": 12
+        },
+        "notes": "Effective for controlling sucking pests like aphids, jassids, whiteflies."
+      },
+      {
+        "name": "Sticky Yellow Traps",
+        "dose_per_acre": 15,
+        "unit": "traps",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "First-line defense for whiteflies and aphids. No chemicals involved."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Acetamiprid 20% SP",
+          "dose_per_acre": 16,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 30,
+            "min_temp": 10
+          },
+          "notes": "Systemic insecticide for mild infestations of sucking pests."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 100,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 28
+          },
+          "notes": "Used only when infestation spreads quickly. Not for repeated use."
+        }
+      ],
+      "high": [
+        {
+          "name": "Fipronil 5% SC",
+          "dose_per_acre": 150,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 28,
+            "min_temp": 10
+          },
+          "notes": "Use only for severe stem borer or leaf-eating caterpillar infestations."
+        }
+      ]
+    }
+  }
+},
+"Leaf Spot Disease": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Trichoderma viride (Bio-fungicide)",
+        "dose_per_acre": 1000,
+        "unit": "g",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true
+        },
+        "notes": "Strengthens plant immunity. Works best in early infection."
+      },
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "max_temp": 32,
+          "avoid_rain": true
+        },
+        "notes": "Reduces fungal spore spread on leaf surfaces."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Mancozeb 75% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 5,
+          "spray_interval_days": 7,
+          "max_sprays": 2,
+          "weather": {
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Preventive fungicide. Use at first appearance of leaf spots."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Chlorothalonil 75% WP",
+          "dose_per_acre": 200,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 12,
+          "phi_days": 3,
+          "spray_interval_days": 10,
+          "max_sprays": 2,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Protectant fungicide. Alternate with Mancozeb to avoid resistance."
+        }
+      ],
+      "high": [
+        {
+          "name": "Azoxystrobin 23% SC",
+          "dose_per_acre": 150,
+          "unit": "ml",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 30
+          },
+          "notes": "Strong systemic fungicide. Use only for spreading severe infection."
+        }
+      ]
+    }
+  }
+},
+"Mosaic Virus Disease": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Sanitation & Removal of Infected Leaves",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Remove infected plants immediately. Disinfect hands and tools with 10% bleach."
+      },
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 3,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32
+        },
+        "notes": "Helps control aphids, which transmit the virus."
+      },
+      {
+        "name": "Sticky Yellow Traps",
+        "dose_per_acre": 15,
+        "unit": "traps",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Best organic solution for suppressing aphid populations."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 100,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 12,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 28
+          },
+          "notes": "Controls aphids (virus carriers). Does NOT cure the virus."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Thiamethoxam 25% WG (Actara)",
+          "dose_per_acre": 80,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 5,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 30
+          },
+          "notes": "Used only if aphid pressure is moderate."
+        }
+      ],
+      "high": [
+        {
+          "name": "Imidacloprid 17.8% SL",
+          "dose_per_acre": 120,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Use only in severe aphid outbreaks. Still NO cure for virus."
+        }
+      ]
+    }
+  }
+},
+"Small Leaf Disease": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Trichoderma viride (Bio-fungicide)",
+        "dose_per_acre": 1000,
+        "unit": "g",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 10,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true
+        },
+        "notes": "Helps suppress soil and leaf fungi that cause stunted growth."
+      },
+      {
+        "name": "Vermicompost Tea / Panchagavya",
+        "dose_per_acre": 50,
+        "unit": "liters",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 10,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true
+        },
+        "notes": "Promotes leaf expansion and corrects mild nutrient deficiencies organically."
+      },
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {
+          "max_temp": 32,
+          "avoid_rain": true
+        },
+        "notes": "Controls sucking pests that worsen leaf deformation."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Carbendazim 50% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 5,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Used when fungal infection is confirmed. Do not overuse."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Thiophanate Methyl 70% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Systemic fungicide. Use only if symptoms worsen after organic options."
+        }
+      ],
+      "high": [
+        {
+          "name": "Benomyl 50% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true
+          },
+          "notes": "Reserved for severe cases only. High resistance risk."
+        }
+      ]
+    }
+  }
+},
+"White Mold Disease": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Remove Infected Leaves & Stems",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Physically remove all white fungal clumps. Do not compost — destroy them."
+      },
+      {
+        "name": "Trichoderma harzianum (Bio-control)",
+        "dose_per_acre": 1000,
+        "unit": "g",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 10,
+        "max_sprays": 2,
+        "weather": {
+          "avoid_rain": true,
+          "max_humidity": 80
+        },
+        "notes": "Highly effective biological antagonist to Sclerotinia fungus."
+      },
+      {
+        "name": "Neem Oil (10000 ppm)",
+        "dose_per_acre": 300,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 7,
+        "max_sprays": 2,
+        "weather": {"avoid_rain": true},
+        "notes": "Useful for preventing secondary fungal spread."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Benomyl 50% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {"avoid_rain": true},
+          "notes": "Effective early systemic fungicide. Avoid repeated use."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Tebuconazole 25.9% EC",
+          "dose_per_acre": 120,
+          "unit": "ml",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_humidity": 80
+          },
+          "notes": "Systemic action. Use only when infection starts spreading fast."
+        }
+      ],
+      "high": [
+        {
+          "name": "Carbendazim + Mancozeb mixture",
+          "dose_per_acre": 600,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "avoid_high_humidity": true
+          },
+          "notes": "Strong combined fungicide. Reserved for severe outbreaks only."
+        }
+      ]
+    }
+  }
+},
+"Wilt Disease": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Trichoderma viride / harzianum (Bio-fungicide)",
+        "dose_per_acre": 1500,
+        "unit": "g",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 10,
+        "max_sprays": 2,
+        "weather": {"avoid_rain": true},
+        "notes": "Most effective organic treatment for Fusarium and Verticillium wilt."
+      },
+      {
+        "name": "Neem Cake (Soil Amendment)",
+        "dose_per_acre": 100,
+        "unit": "kg",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Improves soil health, reduces fungal and nematode activity."
+      },
+      {
+        "name": "Soil Solarization (Optional)",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {"max_temp": 38},
+        "notes": "Using plastic over soil for 20 days kills pathogens naturally."
+      }
+    ],
+    "chemical": {
+      "low": [
+        {
+          "name": "Copper Oxychloride 50% WP",
+          "dose_per_acre": 500,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 3,
+          "spray_interval_days": 10,
+          "max_sprays": 1,
+          "weather": {"avoid_rain": true},
+          "notes": "Useful only for bacterial wilt suppression."
+        }
+      ],
+      "medium": [
+        {
+          "name": "Carbendazim 50% WP",
+          "dose_per_acre": 400,
+          "unit": "g",
+          "toxicity": "medium",
+          "rei_hours": 24,
+          "phi_days": 7,
+          "spray_interval_days": 12,
+          "max_sprays": 1,
+          "weather": {"avoid_rain": true},
+          "notes": "Systemic fungicide for severe fungal wilt. Use sparingly."
+        }
+      ],
+      "high": [
+        {
+          "name": "Metalaxyl + Mancozeb WP (Ridomil Gold)",
+          "dose_per_acre": 600,
+          "unit": "g",
+          "toxicity": "high",
+          "rei_hours": 48,
+          "phi_days": 7,
+          "spray_interval_days": 14,
+          "max_sprays": 1,
+          "weather": {
+            "avoid_rain": true,
+            "max_temp": 30
+          },
+          "notes": "Strong fungicide combination. Only for extreme fungal wilt cases."
+        }
+      ]
+    }
+  }
+},
+"Healthy Leaf": {
+  "treatment": {
+    "organic": [
+      {
+        "name": "Preventive Neem Oil Spray (Optional)",
+        "dose_per_acre": 200,
+        "unit": "ml",
+        "toxicity": "low",
+        "rei_hours": 4,
+        "phi_days": 0,
+        "spray_interval_days": 12,
+        "max_sprays": 1,
+        "weather": {
+          "avoid_rain": true,
+          "max_temp": 32
+        },
+        "notes": "Optional preventive spray. Not required if no pest pressure."
+      },
+      {
+        "name": "Field Hygiene & Monitoring",
+        "dose_per_acre": 0,
+        "unit": "N/A",
+        "toxicity": "none",
+        "rei_hours": 0,
+        "phi_days": 0,
+        "spray_interval_days": 0,
+        "max_sprays": 0,
+        "weather": {},
+        "notes": "Regular monitoring, remove weeds, avoid waterlogging, ensure proper spacing."
+      }
+    ],
+    "chemical": {
+      "low": [],
+      "medium": [],
+      "high": []
+    }
+  }
+}
+}
+
+}
